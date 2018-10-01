@@ -18,21 +18,25 @@ return{
 todos:[{
 title:'Todo A',
 project:'Project A',
+Author:'Lisa Woods',
 done: false,
 },
 {
 title:'Todo B',
 project:'project B',
+Author:'Mary',
 done:true,
 }
 ,{
 title :'Todo C',
 project:'Project C',
+Author:'Leo',
 done:false,
 },
 {
 title:'Todo D',
 project:'project D',
+Author:'Suzan',
 done:false
 }],
 

@@ -1,13 +1,13 @@
 <template>
 
-<div class="ui centred card">
+<div class="ui centered card">
 
 <div class ='content'>
 <div class='header'>
-{{ todo.title}}
+{{ todo.Author}}
 </div>
 <div class='meta'>
-{{todo.id}} {{ todo.project }}
+{{id}} {{ todo.project }}
 </div>
 <div class ='extra content'>
   <span class='right floated edit icon ' v-on:click='showForm'>
@@ -50,7 +50,8 @@
 
   },
   methods:{
-  showForms(){
+
+  showForm(){
   this.isEditing=true;
   },
   hideForm(){
