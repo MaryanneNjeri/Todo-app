@@ -27,3 +27,36 @@ Cancel
 </div>
 </div>
 </template>
+<script>
+export default {
+data() {
+return {
+titleText: '',
+projectText: '',
+isCreating:false,
+};
+},
+methods: {
+openForm(){
+this.isCreating = true;
+},
+closeForm(){
+this.isCreating = false;
+},
+sendForm(){
+if (this.titleText.length > 0 && this.projectText.length > 0){
+const title = this.titleText;
+const project = this.projectText;
+this.$emit('create-todo',{
+title,
+project,
+done: false,
+});
+this.newTodoText='';
+}
+this.isCreating = false;
+
+},
+},
+};
+</script>
