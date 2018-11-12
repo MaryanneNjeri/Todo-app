@@ -13,7 +13,7 @@
 <div class="field">
 <label>Project</label>
 <input type="text"  ref="project" defaultValue="">
-<div>
+</div>
 <div class="ui two button attached buttons">
 <button class="ui basic blue button" v-on:click="sendForm()">
 Create
@@ -27,13 +27,16 @@ Cancel
 </div>
 </div>
 </template>
+
 <script>
 export default {
+
 data() {
+
 return {
 titleText: '',
 projectText: '',
-isCreating:false,
+isCreating: false,
 };
 },
 methods: {
@@ -43,10 +46,12 @@ this.isCreating = true;
 closeForm(){
 this.isCreating = false;
 },
+
 sendForm(){
 if (this.titleText.length > 0 && this.projectText.length > 0){
 const title = this.titleText;
 const project = this.projectText;
+
 this.$emit('create-todo',{
 title,
 project,
